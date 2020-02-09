@@ -1,8 +1,8 @@
 body {
   background-image: url('images/background.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  /* background-size: 100% 100%; */
   color: black;
   font-family: "Determination Mono", sans-serif;
 }
@@ -12,4 +12,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.font-1 {
+  font-family: "Determination Mono", monospace;
 }
