@@ -26,7 +26,9 @@ SECRET_KEY = 'z@(16__gz7)&9x=n+u%wc0=2^qh76g8a2#wh(o_1js)ahf^73_'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'grador.fr',
+    'grador.fun',
     '192.168.1.34',
 ]
 
