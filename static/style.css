@@ -1,8 +1,8 @@
 body {
   background-image: url('images/background.png');
-  background-repeat: repeat;
-  background-attachment: scroll;
-  /* background-size: 100% 100%; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   color: black;
   font-family: "Determination Mono", sans-serif;
 }
@@ -28,4 +28,24 @@ body {
 
 .font-1 {
   font-family: "Determination Mono", monospace;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-top: 75%;
 }
