@@ -18,8 +18,10 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
-from pages.views import homePageView
+from pages.views import homePageView, shopPageView, aproposPageView
 
 urlpatterns = [
+    url(r'shop', shopPageView, name='shop'),
+    url(r'a-propos', aproposPageView, name='a-propos'),
     url(r'', homePageView, name='home')
 ]

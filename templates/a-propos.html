@@ -1,0 +1,42 @@
+{% load static %}
+<head>
+  <title>À propos de Grador</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <link rel="stylesheet" type="text/css" href="https://cartr.gitlab.io/undertale-fonts/webfonts/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <script src="{% static 'particles.js' %}"></script>
+  <script src="{% static 'app.js' %}"></script>
+</head>
+<body>
+    <div id="particles-js" class="a-propos">
+      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+    </div>
+    <div class='navigation-bar'>
+      <img class="center" src="{% static 'images/favicon.png' %}">
+      <div class='item'>
+        <div class="tooltip">
+          <button onclick="copy()" class="copy-button center-button" id="copy-button">
+            <span class="tooltiptext" id="myTooltip">Copier dans le Presse-papiers</span>
+            <div id="ip">play.grador.fr</div>
+          </button>
+          </div>
+      </div>
+      <div class='item'>
+        <h1 class='title'>
+          <a href="/" class="link">Accueil</a>
+        </h1>
+      </div>
+      <div class='item'>
+        <h1 class='title'>
+          <a href="/shop" class="link">Shop/don</a>
+        </h1>
+      </div>
+      <div class='item'>
+        <h1 class='title-selectioned'>
+          <a href="/a-propos" class="link">À propos</a>
+        </h1>
+      </div>
+    </div>
+    <div class="title-text"><font color="#ff0202">Page en travaux</font></div>
+    <img class="center" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Road-works-warning-sign%2C-Seiersberg%2C-Austria.gif">
+<body>

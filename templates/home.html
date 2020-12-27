@@ -1,0 +1,139 @@
+{% load static %}
+<head>
+  <title>Grador serveur Minecraft</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <link rel="stylesheet" type="text/css" href="https://cartr.gitlab.io/undertale-fonts/webfonts/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <script src="{% static 'particles.js' %}"></script>
+  <script src="{% static 'app.js' %}"></script>
+</head>
+<body>
+    <div id="particles-js" class="home">
+      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+    </div>
+      <div class='navigation-bar'>
+        <img class="center" src="{% static 'images/favicon.png' %}">
+        <div class='item'>
+          <div class="tooltip">
+            <button onclick="copy()" class="copy-button center-button" id="copy-button">
+              <span class="tooltiptext" id="myTooltip">Copier dans le Presse-papiers</span>
+              <div id="ip">play.grador.fr</div>
+            </button>
+            </div>
+        </div>
+        <div class='item'>
+          <h1 class='title-selectioned'>
+            <a href="/" class="link">Accueil</a>
+          </h1>
+        </div>
+        <div class='item'>
+          <h1 class='title'>
+            <a href="/shop" class="link">Shop/don</a>
+          </h1>
+        </div>
+        <div class='item'>
+          <h1 class='title'>
+            <a href="/a-propos" class="link">À propos</a>
+          </h1>
+        </div>
+      </div>
+      <img class="center" src="{% static 'images/logo.png' %}" height="400" width="400"/>
+      <div class="box center-no-flex">
+        <img class="center signal-bars" src="{% static 'images/signal-bars.svg' %}" height="150">
+        <div class="center big-text contouring-text">État du serveur :&nbsp;<font color="{{ server.color }}"><strong>{{ server.status }}</strong></font>
+        </div>
+        <div class='center big-text contouring-text'>
+          Joueurs en lignes :&nbsp;<font color="#6c9814">{{ server.players.online }}/{{ server.players.max }}</font>
+        </div>
+      </div>
+  </div>
+  <svg class="bluewave" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path class="wavePath" d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z" fill="currentColor"/>
+  </svg>
+  <div class='blue-background'>
+    <div class="title-text"><u>C'est quoi Grador ?</u></div>
+    <p class="text center">Grador est un serveur minecraft qui proposera des mini jeux ,
+      <br>
+      du Rp modée et du PvP Faction modée mais tout est en cours
+      <br>
+      de developpement !</p>
+      <img class="img center" width="50%" src="{% static 'images/image.png' %}">
+    <svg class="small-space wave" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path class="wavePath" d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z" fill="#f1c40f"/>
+    </svg>
+  </div>
+  <div class="yelow-background">
+    <div class="tooltip-2">
+      <button onclick="copy_two()" class="copy-button center" id="copy-button">
+        <span class="tooltiptext" id="myTooltip-2">Copier dans le Presse-papiers</span>
+        <div id="ip-2">play.grador.fr</div>
+      </button>
+      </div>
+    <div class="small-space big-text">Viens nous rejoindre sur play.grador.fr de la 1.9 à la 1.16 !</div>
+    <svg class="wave" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path class="wavePath" d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z" fill="#2c2f33"/>
+    </svg>
+  </div>
+  <div class="dark-background">
+    <div class="discord-background">
+      <div class="title-text purple-text">
+        Serveur discord
+      </div>
+      <div class="center small-space">
+        <a href="http://discord.gg/z8aBxkY" class="purple-button" target="_blank">
+          <img class="icon" src="{% static 'images/Discord-Logo.svg' %}" />
+          Rejoindre notre serveur discord
+        </a>
+      </div>
+      <div class="small-space big-text">Viens rejoindre notre serveur discord !
+        <br>
+        Avec une super communité et du fun !
+    </div>
+    </div>
+    <div class="black-background">
+      <div class="footer">
+        <div class="item">
+          <div class="title-no-center">GRADOR</div>
+          Site entièrement réaliser main sans cms
+        </div>
+        <div class="item">
+          <div class="text">
+            <u>Contact :</u>
+            <div class="message">
+            <a href="mailto:gradorserver@gmail.com" class="text-icon link" onclick="mail_to()">
+              <img class="small-icon" src="{% static 'images/Gmail-logo.svg' %}"/>
+              <span class="tooltiptext" id="tool-tip-email">Ouvir les mails</span>
+              <div id="adress-email">gradorserver@gmail.com</div>
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="text">
+            <u>Réseaux sociaux :</u>
+            <br>
+            <a class="purple-link link-icon" href="https://discord.com/invite/z8aBxkY" target="blank_">
+              <img class="small-icon" src="{% static 'images/Discord-Logo-Color.svg' %}"/>
+              Discord
+            </a>
+            <a class="purple-link link-icon" href="https://www.youtube.com/channel/UCur3T3x1YI0B0N7mwPZbmCA" target="blank_">
+              <img class="verry-small-icon" src="{% static 'images/Youtube_logo.svg' %}"/>
+              <span>Youtube</span>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="text">
+            <u>Pages :</u>
+            <br>
+            <a class="purple-link" href="/" target="blank_">Accueil</a>
+            <br>
+            <a class="purple-link" href="/shop" target="blank_">Shop</a>
+            <br>
+            <a class="purple-link" href="/a-propos" target="blank_">À propos</a>
+          </div>
+        </div>
+        <div class='complete-footer'></div>
+      </div>
+  </div>
+</body>

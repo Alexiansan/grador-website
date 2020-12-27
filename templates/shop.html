@@ -1,0 +1,149 @@
+{% load static %}
+<head>
+  <title>Grad'shop</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <!--<link rel="stylesheet" type="text/css" href="https://cartr.gitlab.io/undertale-fonts/webfonts/stylesheet.css">-->
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="{% static 'particles.js' %}"></script>
+  <script src="{% static 'app.js' %}"></script>
+</head>
+<body>
+    <div id="particles-js" class="shop">
+      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+    </div>
+    <div class='navigation-bar'>
+      <img class="center" src="{% static 'images/favicon.png' %}">
+      <div class='item'>
+        <div class="tooltip">
+          <button onclick="copy()" class="copy-button center-button" id="copy-button">
+            <span class="tooltiptext" id="myTooltip">Copier dans le Presse-papiers</span>
+            <div id="ip">play.grador.fr</div>
+          </button>
+          </div>
+      </div>
+      <div class='item'>
+        <h1 class='title'>
+          <a href="/" class="link">Accueil</a>
+        </h1>
+      </div>
+      <div class='item'>
+        <h1 class='title-selectioned'>
+          <a href="/shop" class="link">Shop/don</a>
+        </h1>
+      </div>
+      <div class='item'>
+        <h1 class='title'>
+          <a href="/a-propos" class="link">À propos</a>
+        </h1>
+      </div>
+    </div>
+  <div class='big-blue-title center contouring-text'>Shop</div>
+  <div class="large-text center text-shadow contouring-text">Ici vous pouvez nous soutenir et aidez à payer le serveur, et avec votre aide peut-être qu’un jour on pourra vous proposez du moddé, du rp ou autres serveurs ! Votre contribution à acheter un grade pourrait donner vie à de nouveaux projets ! </div>
+  <svg class="orange-wave" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path class="wavePath" d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z" fill="currentColor"/>
+  </svg>
+  <div class="orange-background">
+    <div class="flex">
+      <div class="container">
+        <div class="grey-shadow-circle center">
+        </div>
+        <div class="center text-price">9,99€</div>
+        <div class="title-text grey-text">CHEVALIER </div>
+        <div class="perk-box">
+          <div class="perk">
+            Pseudo en <font color="#34495e">couleur</font>
+          </div>
+          <div class="perk">
+            Jusqu'à 8 homes
+          </div>
+          <div class="perk">
+            Téléportation instantané
+          </div>
+          <div class="perk-locked">
+            /craft (permet d'accèder a une interface d'établi juste avec cette commande)
+          </div>
+          <div class="perk-locked">
+            /furnace (permet de cuire tous vos items dans votre main)
+          </div>
+          <div class="perk-locked">
+            Perte d'xp du joueur<br>⁢⁢⁢⁢⁢⁢⁢⁢⁢⁢ ⁢⁢⁢⁢⁢⁢⁢⁢⁢⁢
+          </div>
+          <div class="perk-locked">
+            jusqu'à 3 lignes dans l'ender cheast 
+          </div>
+        </div>
+        <div class="center">
+          <button class="grey-background buy-button">
+            Acheter
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="blue-shadow-circle center">
+        </div>
+        <div class="center text-price">19,99€</div>
+        <div class="title-text blue-text">GRADORIEN</div>
+        <div class="perk-box">
+          <div class="perk">
+            Pseudo en <font color="#3491d0">couleur</font>
+          </div>
+          <div class="perk">
+            Jusqu'à 12 homes
+          </div>
+          <div class="perk">
+            Téléportation instantané
+          </div>
+          <div class="perk">
+            /craft (permet d'accèder a une interface d'établi juste avec cette commande)
+          </div>
+          <div class="perk">
+            /furnace (permet de cuire tous vos items dans votre main)
+          </div>
+          <div class="perk">
+            Divise par 2 l'xp du joueur à sa mort
+          </div>
+          <div class="perk-locked">
+            jusqu'à 3 lignes dans l'ender cheast 
+          </div>
+        </div>
+        <button class="blue-background-button buy-button">
+          Acheter
+        </button>
+      </div>
+        <div class="container">
+          <div class="gold-shadow-circle center">
+          </div>
+          <div class="center text-price">29,99€</div>
+          <div class="title-text gold-text">SUPER GRADORIEN</div>
+          <div class="perk-box">
+            <div class="perk">  
+              Pseudo en <font color="gold">couleur</font>
+            </div>
+            <div class="perk">
+              Jusqu'à 12 homes  
+            </div>
+            <div class="perk">
+              Téléportation instantané
+            </div>
+            <div class="perk">
+              /craft (permet d'accèder a une interface d'établi juste avec cette commande)
+            </div>
+            <div class="perk">
+              /furnace (permet de cuire tous vos items dans votre main)
+            </div>
+            <div class="perk">
+              Pas de perte d'xp du joueur à sa mort⁢⁢⁢⁢⁢⁢⁢⁢⁢⁢
+            </div>
+            <div class="perk">
+              jusqu'à 3 lignes dans l'ender cheast 
+            </div>
+          </div>
+          <button class="gold-background buy-button">
+            Acheter
+          </button>
+      </div>
+    </div>
+  </div>
+</body>
